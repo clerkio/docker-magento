@@ -1,3 +1,10 @@
+# CLERK NOTES
+
+After `docker-compose up -d` you have to manually start ftp server, I have done it this way
+
+    admin@ip-10-0-0-188:~/docker-magento$ docker exec -it dockermagento_web_1 /bin/bash
+    root@141a6d1718bd:/var/www/htdocs# /usr/local/bin/ftpserver &
+
 # Docker image for Magento
 
 This repo creates a Docker image for [Magento](http://magento.com/).
@@ -79,7 +86,7 @@ MAGENTO_DEFAULT_CURRENCY  | Magento default currency | NZD
 MAGENTO_URL               | Magento base url | http://local.magento
 MAGENTO_ADMIN_FIRSTNAME   | Magento admin firstname | Admin
 MAGENTO_ADMIN_LASTNAME    | Magento admin lastname | MyStore
-MAGENTO_ADMIN_EMAIL       | Magento admin email | amdin@example.com
+MAGENTO_ADMIN_EMAIL       | Magento admin email | admin@example.com
 MAGENTO_ADMIN_USERNAME    | Magento admin username | admin
 MAGENTO_ADMIN_PASSWORD    | Magento admin password | magentorocks1
 
